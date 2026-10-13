@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Identity Magician//The Visibility Switch//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:visibility-switch-2026@theidentitymagician
+DTSTAMP:20261013T100000Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261107
+SUMMARY:The Visibility Switch™ with Kasia
+DESCRIPTION:Free 3-day activation with Kasia Rutkowiak\, The Identity Magician. Check your email for everything you need.
+BEGIN:VALARM
+TRIGGER:-PT12H
+ACTION:DISPLAY
+DESCRIPTION:The Visibility Switch starts tomorrow
+END:VALARM
+END:VEVENT
+END:VCALENDAR

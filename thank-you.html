@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're In | The Visibility Switch™</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://theidentitymagician.github.io/visibility-switch/">
+<meta property="og:title" content="The Visibility Switch™ | Free 3-Day Activation with Kasia">
+<meta property="og:description" content="Become the one who gets seen, chosen and paid. In just 3 days. Free, 4–6 November 2026.">
+<meta property="og:image" content="https://theidentitymagician.github.io/visibility-switch/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://theidentitymagician.github.io/visibility-switch/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!--FONTS-->
+<style>
+:root { --black:#0a0a0a; --crimson:#8c0a1b; --cream:#eeebe3; --muted:rgba(238,235,227,0.88); --gold:#d4af37; --line:rgba(212,175,55,0.35); }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Jost',sans-serif; font-weight:400; background:var(--black); color:var(--cream); line-height:1.7; -webkit-font-smoothing:antialiased; min-height:100vh; display:flex; flex-direction:column; }
+a { text-decoration:none; }
+strong { font-weight:600; color:#fff; }
+.display { font-family:'Anton','Jost',sans-serif; font-weight:400; text-transform:uppercase; }
+.gold-text { background:linear-gradient(180deg,#fff3c4 0%,#f9dc72 28%,#f0c23b 60%,#dda52a 100%); -webkit-background-clip:text; background-clip:text; color:transparent; filter:drop-shadow(0 0 22px rgba(245,196,60,0.35)); }
+
+nav { padding:1.1rem 0; border-bottom:1px solid rgba(212,175,55,0.14); }
+.nav-inner { max-width:1240px; margin:0 auto; padding:0 2rem; }
+.brand { font-size:0.76rem; text-transform:uppercase; letter-spacing:0.32em; font-weight:500; color:var(--cream); }
+
+main { flex:1; position:relative; overflow:hidden; display:flex; align-items:center; padding:72px 0; background:radial-gradient(ellipse at 50% 110%, rgba(140,10,27,0.6) 0%, rgba(10,10,10,0) 60%), var(--black); }
+.wrap { max-width:820px; margin:0 auto; padding:0 2rem; text-align:center; position:relative; z-index:1; }
+
+.rec { display:inline-flex; align-items:center; gap:0.7em; }
+.rec::before { content:""; width:0.62em; height:0.62em; border-radius:50%; background:#e0263f; animation:pulse 1.8s infinite; flex:none; }
+@keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(224,38,63,0.55);} 70%{box-shadow:0 0 0 0.6em rgba(224,38,63,0);} 100%{box-shadow:0 0 0 0 rgba(224,38,63,0);} }
+.eyebrow { font-size:0.78rem; letter-spacing:0.4em; text-transform:uppercase; font-weight:500; color:var(--cream); margin-bottom:1.4rem; justify-content:center; }
+
+h1 { font-size:clamp(3rem,8.5vw,6.5rem); line-height:0.9; color:#fff; margin-bottom:1.4rem; }
+.lead { font-size:clamp(1.2rem,2vw,1.5rem); color:var(--muted); margin-bottom:2.8rem; }
+.lead strong { color:#fff; }
+
+.steps { position:relative; z-index:2;  text-align:left; border-top:1px solid var(--line); margin:0 auto 2.6rem; max-width:680px; }
+.step { display:grid; grid-template-columns:56px 1fr; gap:1rem; padding:1.4rem 0; border-bottom:1px solid var(--line); }
+.num { font-family:'Anton',sans-serif; font-size:1.9rem; line-height:1.15; color:#f0c23b; }
+.step h3 { font-size:1.35rem; font-weight:600; color:#fff; line-height:1.3; margin-bottom:0.3rem; }
+.step p { font-size:1.08rem; color:var(--muted); line-height:1.6; }
+
+.btn { background:linear-gradient(180deg,#fde68f 0%,#f5cf4f 45%,#e8b42e 100%); color:var(--black) !important; padding:1.1rem 2.4rem; font-size:0.78rem; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; display:inline-flex; align-items:center; gap:0.8em; border-radius:2px; box-shadow:0 0 0 1px rgba(255,236,160,0.35) inset, 0 10px 44px rgba(245,196,60,0.38); transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease; position:relative; overflow:hidden; }
+.btn::before { content:""; width:0.55em; height:0.55em; border-radius:50%; background:var(--crimson); }
+.btn::after { content:""; position:absolute; top:0; left:-75%; width:50%; height:100%; background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.55) 50%,rgba(255,255,255,0) 100%); transform:skewX(-20deg); }
+.btn:hover { transform:translateY(-4px) scale(1.05); box-shadow:0 0 0 1px rgba(255,236,160,0.5) inset, 0 18px 60px rgba(245,196,60,0.55); }
+.btn:hover::after { animation:shine .8s ease forwards; }
+@keyframes shine { to { left:130%; } }
+.cal-label { font-size:0.78rem; letter-spacing:0.35em; text-transform:uppercase; font-weight:500; color:var(--cream); margin-bottom:1.1rem; }
+.cal-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+.small { font-size:0.9rem; color:rgba(238,235,227,0.6); margin-top:1.1rem; }
+
+.buddy { margin-top:3rem; padding-top:2.2rem; border-top:1px solid var(--line); }
+.buddy-eyebrow { font-family:'Anton',sans-serif; text-transform:uppercase; font-size:clamp(2rem,4vw,3rem); line-height:1.1; color:#fff; margin-bottom:0.9rem; }
+.buddy-text { font-size:1.08rem; color:var(--muted); max-width:600px; margin:0 auto 1.6rem; line-height:1.7; }
+.share-btns { display:flex; gap:0.8rem; justify-content:center; flex-wrap:wrap; }
+.share { font-family:'Jost',sans-serif; background:transparent; border:1px solid var(--gold); color:#f0c23b; padding:0.85rem 1.5rem; font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; font-weight:600; border-radius:2px; cursor:pointer; transition:all .3s ease; }
+.share:hover { background:#f0c23b; color:var(--black); transform:translateY(-2px); }
+.copied { font-size:0.9rem; color:#f9dc72; min-height:1.4em; margin-top:0.8rem; }
+.ripple { position:relative; overflow:visible; margin:0.6rem 0 0; padding:1.6rem 0 2.6rem; border-top:none !important; background:none; }
+.ripple::before { content:""; position:absolute; left:50%; top:50%; width:1500px; height:1100px; transform:translate(-50%,-50%); background:radial-gradient(closest-side, rgba(155,15,34,0.85) 0%, rgba(110,8,23,0.55) 40%, rgba(58,4,12,0.2) 70%, rgba(10,10,10,0) 100%); pointer-events:none; z-index:0; }
+.ripple-inner { position:relative; z-index:1; }
+.ring { z-index:0; position:absolute; left:50%; top:50%; width:140px; height:140px; margin:-70px 0 0 -70px; border-radius:50%; border:2px solid rgba(255,214,140,0.45); box-shadow:0 0 30px rgba(255,120,120,0.15), inset 0 0 30px rgba(255,120,120,0.12); animation:ripple 6s cubic-bezier(.25,.6,.35,1) infinite; opacity:0; pointer-events:none; }
+.r2 { animation-delay:3s; }
+@keyframes ripple { 0% { transform:scale(0.2); opacity:0; } 12% { opacity:0.9; } 100% { transform:scale(8); opacity:0; } }
+@media (prefers-reduced-motion: reduce) { .ring { animation:none; opacity:0.3; } }
+.buddy-eyebrow span { color:#f9dc72; }
+.ripple .buddy-text { color:rgba(255,255,255,0.95); margin:0 auto 1.1rem; font-size:1.3rem; line-height:1.6; max-width:760px; }
+.ripple .ripple-close { color:#fff; font-weight:600; font-size:1.3rem; }
+.ripple .share-btns { margin-top:1.6rem; }
+.ripple .share { background:rgba(10,10,10,0.35); }
+.signoff { position:relative; z-index:2;  margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); }
+.signoff p { font-family:'Anton',sans-serif; text-transform:uppercase; font-size:clamp(1.4rem,2.6vw,2rem); line-height:1.15; color:#fff; }
+.signoff span { color:#f9dc72; }
+.signoff .name { font-family:'Jost',sans-serif; text-transform:none; font-size:1rem; color:var(--muted); margin-top:0.8rem; letter-spacing:0.08em; }
+
+footer { padding:32px 0; text-align:center; font-size:0.8rem; letter-spacing:0.1em; color:rgba(238,235,227,0.45); border-top:1px solid rgba(212,175,55,0.45); }
+
+@media (max-width:768px) {
+  .nav-inner { padding:0 1rem; } .brand { font-size:0.62rem; letter-spacing:0.2em; }
+  main { padding:48px 0; } .wrap { padding:0 1.4rem; }
+  .eyebrow { font-size:0.62rem; letter-spacing:0.26em; }
+  .step { grid-template-columns:44px 1fr; } .num { font-size:1.6rem; }
+  .step h3 { font-size:1.15rem; } .step p { font-size:1rem; }
+  .ripple { margin:0.4rem 0 0; padding:1.4rem 0 2.2rem; }
+  .ripple::before { width:900px; height:1000px; }
+  .cal-btns { flex-direction:column; align-items:stretch; max-width:300px; margin:0 auto; }
+  .btn { justify-content:center; padding:1rem 1.6rem; font-size:0.7rem; letter-spacing:0.18em; }
+}
+main { padding:40px 0 56px !important; align-items:flex-start !important; }
+.eyebrow { margin-bottom:1rem !important; }
+h1 { font-size:clamp(2.8rem,7vw,5.4rem) !important; margin-bottom:0.8rem !important; }
+.lead { margin-bottom:1.6rem !important; }
+.step { padding:1.05rem 0 !important; }
+.steps { margin-bottom:0 !important; }
+.step .cal-btns { justify-content:flex-start; margin-top:1rem; gap:0.7rem; }
+.step .btn { padding:0.85rem 1.4rem; font-size:0.7rem; letter-spacing:0.2em; }
+@media (max-width:768px) { main { padding:28px 0 44px !important; } .step .cal-btns { flex-direction:column; align-items:stretch; max-width:none; margin-left:0; } .step .btn { justify-content:center; } }
+
+/* DROP + RIPPLE (synced: drop every 3s, ring on impact) */
+.ripple { --impact: 42px; }
+.ring { top: var(--impact) !important; animation: ripple 6s cubic-bezier(.22,.6,.35,1) infinite !important; }
+.r1 { animation-delay: .7s !important; } .r2 { animation-delay: 3.7s !important; }
+.drop { position:absolute; left:50%; top: var(--impact); width:14px; height:20px; margin:-20px 0 0 -7px; z-index:1; pointer-events:none;
+  border-radius:50% 50% 50% 50% / 62% 62% 38% 38%;
+  background: radial-gradient(circle at 35% 65%, #fffbe8 0%, #f9dc72 35%, #e8b42e 75%, rgba(232,180,46,0.6) 100%);
+  box-shadow: 0 0 14px rgba(249,220,114,0.75), 0 0 32px rgba(249,220,114,0.35);
+  animation: dropfall 3s cubic-bezier(.55,0,.9,.45) infinite; opacity:0; }
+@keyframes dropfall {
+  0% { transform: translateY(-320px) scaleY(0.9); opacity:0; }
+  6% { opacity:1; }
+  21% { transform: translateY(-6px) scaleY(1.35); opacity:1; }
+  23.3% { transform: translateY(0) scale(1.4,0.35); opacity:0.9; }
+  26% { transform: translateY(0) scale(0.2); opacity:0; }
+  100% { transform: translateY(0) scale(0.2); opacity:0; } }
+.splash { position:absolute; left:50%; top: var(--impact); width:90px; height:22px; margin:-11px 0 0 -45px; z-index:1; border-radius:50%; pointer-events:none;
+  background: radial-gradient(ellipse at center, rgba(255,240,190,0.85) 0%, rgba(249,220,114,0.35) 40%, rgba(249,220,114,0) 70%);
+  animation: splash 3s ease-out infinite; opacity:0; }
+@keyframes splash { 0%,22% { transform:scale(0.2); opacity:0; } 24% { transform:scale(0.6); opacity:1; } 40% { transform:scale(1.8); opacity:0; } 100% { opacity:0; } }
+.ripple-inner { padding-top: 52px; }
+@media (prefers-reduced-motion: reduce) { .drop, .splash { display:none; } }
+@media (max-width:768px) { br.d-only { display:none; } .ripple .buddy-text, .ripple .ripple-close { font-size:1.12rem; } }
+</style>
+</head>
+<body>
+
+<main>
+  <div class="wrap">
+    <div class="eyebrow rec">Your seat is saved</div>
+    <h1 class="display">Yay, you're <span class="gold-text">in!</span></h1>
+    <p class="lead">Here's what happens next:</p>
+
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <div><h3>Check your inbox</h3>
+        <p>Everything you need is on its way. If it's not there in a few minutes, check your promotions or spam folder and move me to your main inbox, so you don't miss a thing.</p></div>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <div><h3>Mark 4&ndash;6 November in your calendar</h3>
+        <p>This activation is made for busy humans, and it will be as time-friendly as possible. Still, you have to show up for it, and marking your calendar right now is the first step.</p>
+        <div class="cal-btns">
+      <a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=The%20Visibility%20Switch%E2%84%A2%20with%20Kasia&amp;dates=20261104/20261107&amp;details=Free%203-day%20activation%20with%20Kasia%20Rutkowiak%2C%20The%20Identity%20Magician.%20Check%20your%20email%20for%20everything%20you%20need." target="_blank" rel="noopener">Google Calendar</a>
+      <a class="btn" href="./visibility-switch.ics" download="visibility-switch.ics">Apple Calendar</a>
+    </div></div>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <div><h3>Watch for your 2&#8209;Minute&nbsp;Switch</h3>
+        <p>If you're one of the first 20 people, your exclusive audio arrives on Sunday, 1 November, 3 days before we start.</p></div>
+      </div>
+    </div>
+
+
+    <div class="buddy ripple">
+      <span class="drop"></span><span class="splash"></span><span class="ring r1"></span><span class="ring r2"></span>
+      <div class="ripple-inner">
+        <p class="buddy-eyebrow">Let's make the ripple <span>grow.</span></p>
+        <p class="buddy-text">The more of us show the f*ck up, the bigger businesses we build, <br class="d-only">the more money we make, and <strong>the more people we help</strong>.</p>
+        <p class="buddy-text">If you know someone brilliant who's still hiding, send them the link.<br>It might be the very nudge they've been waiting for.</p>
+        <p class="buddy-text ripple-close">Together, we can make that ripple&nbsp;grow.</p>
+        <div class="share-btns">
+          <button class="share" type="button" id="copyLink">Copy the link</button>
+          <a class="share" id="waLink" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="share" id="mailLink" href="#">Email</a>
+        </div>
+        <p class="copied" id="copied" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="signoff">
+      <p>Get ready to <span>switch it on.</span></p>
+      <p class="name">With love, 🪄 Kasia</p>
+    </div>
+  </div>
+</main>
+
+<footer>&copy; 2026 Kasia Rutkowiak &middot; The Identity Magician</footer>
+
+<script>
+(function(){
+  var FALLBACK = 'https://theidentitymagician.github.io/visibility-switch/';
+  var signup = FALLBACK;
+  try {
+    if (/^https?:/.test(window.location.protocol)) {
+      signup = window.location.origin + window.location.pathname.replace(/[^\/]*$/, '');
+    }
+  } catch (e) { signup = FALLBACK; }
+  var wa = "I just signed up for this and thought of you straight away. It's free, 3 days, 4\u20136 Nov, and super easy to digest. Would you like to do it together? " + signup;
+  var mail = "I just signed up for The Visibility Switch, a free 3-day activation with Kasia, The Identity Magician, 4\u20136 November.\n\nIt's all on your phone and made for busy people, so I immediately thought of you.\n\nAlso, it's free (just this once). Want to do it with me?\n\n" + signup;
+  document.getElementById('waLink').href = 'https://wa.me/?text=' + encodeURIComponent(wa);
+  document.getElementById('mailLink').href = 'mailto:?subject=' + encodeURIComponent('Thought of you (do this with me?)') + '&body=' + encodeURIComponent(mail);
+  document.getElementById('copyLink').addEventListener('click', function(){
+    var done = function(){ document.getElementById('copied').textContent = 'Link copied. Now send it to your buddy!'; };
+    if (navigator.clipboard) { navigator.clipboard.writeText(signup).then(done, done); } else { done(); }
+  });
+})();
+</script>
+</body>
+</html>
