@@ -1028,7 +1028,9 @@
 
         /* === PREMIUM PASS 24 OCT === */
         .vs-bar { background: #6e1512 !important; }
-        .section-hero-img { position: relative; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('nlft-hero.jpg') center/cover no-repeat; padding: 120px 20px 110px; }
+        .section-hero-img { position: relative; overflow: hidden; background: #2a1d12; padding: 120px 20px 110px; }
+        .section-hero-img .hero-bg { position: absolute; left: 0; right: 0; top: -12%; height: 124%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('nlft-hero.jpg') center/cover no-repeat; will-change: transform; z-index: 0; }
+        .section-hero-img > .container { position: relative; z-index: 1; will-change: transform, opacity; }
         .section-hero-img .container { max-width: 1200px; }
         .section-hero-img .main-title { white-space: normal; color: #ffffff !important; font-size: clamp(42px, 7vw, 84px) !important; line-height: 1.05; text-shadow: 0 2px 4px rgba(0,0,0,0.85), 0 4px 18px rgba(0,0,0,0.75), 0 0 40px rgba(0,0,0,0.55); }
         .section-hero-img .main-title-italic { color: #ffffff !important; font-size: clamp(32px, 5.4vw, 66px) !important; text-shadow: 0 2px 4px rgba(0,0,0,0.85), 0 4px 18px rgba(0,0,0,0.75), 0 0 40px rgba(0,0,0,0.55); }
@@ -1050,7 +1052,7 @@
         .section-vip a { color: var(--yellow) !important; }
         .section-vip .vip-box { margin: 0 !important; padding-top: 0 !important; }
         .section-hero-img .subtitle { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 2.4vw, 1.8rem); line-height: 1.45; max-width: 640px; margin-left: auto; margin-right: auto; }
-        @media (max-width: 768px) { .section-hero-img { padding: 80px 20px 70px; background-color: #1a120b; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('nlft-hero.jpg') center/cover no-repeat; } .section-vip { padding: 44px 20px; } }
+        @media (max-width: 768px) { .section-hero-img { padding: 80px 20px 70px; } .section-hero-img .hero-bg { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('nlft-hero.jpg') center/cover no-repeat; } .section-vip { padding: 44px 20px; } }
     </style>
 </head>
 <body>
@@ -1061,6 +1063,7 @@
 
     <!-- SECTION 1: HEADER (image) -->
     <div class="section-hero-img">
+        <div class="hero-bg" aria-hidden="true"></div>
         <div class="container">
             <div class="header">
                 <p class="vs-eyebrow">The Visibility Switch™ Members Only</p>
@@ -1661,6 +1664,24 @@ function vsCopyCode(btn){
   btn.textContent = 'COPIED ✓';
   setTimeout(function(){ btn.textContent = 'SWITCH'; }, 1800);
 }
+</script>
+<script>
+(function(){
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var hero=document.querySelector('.section-hero-img'); if(!hero) return;
+  var bg=hero.querySelector('.hero-bg'), txt=hero.querySelector('.container'), ticking=false;
+  function update(){
+    var r=hero.getBoundingClientRect(), y=-r.top;
+    if (y>=-10 && y<=r.height+10){
+      bg.style.transform='translate3d(0,'+(y*0.45)+'px,0)';
+      txt.style.transform='translate3d(0,'+(y*-0.12)+'px,0)';
+      txt.style.opacity=Math.max(0,1-y/(r.height*0.9));
+    }
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){ if(!ticking){ticking=true; requestAnimationFrame(update);} },{passive:true});
+  update();
+})();
 </script>
 </body>
 </html>
