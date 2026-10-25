@@ -1122,6 +1122,11 @@
         .section-done .cta-wrapper { margin-bottom: 0 !important; }
         #price > div:first-of-type ul { max-width: 900px; }
         @media (max-width: 768px) { .section-hero-img ~ * .x {} }
+        .menu-list { list-style: none; margin: 0 auto; padding: 0; }
+        .menu-list li { font-size: 20px !important; line-height: 1.5 !important; color: #000 !important; padding: 0 !important; margin: 0 !important; position: static !important; text-align: center !important; }
+        .menu-list li::before { content: none !important; display: none !important; }
+        .menu-list li + li::before { content: "" !important; display: block !important; position: static !important; width: 6px !important; height: 6px !important; border-radius: 50%; background: #c9a227 !important; margin: 16px auto !important; left: auto !important; top: auto !important; }
+        @media (max-width: 768px) { .menu-list li { font-size: 18px; } }
     </style>
 </head>
 <body>
@@ -1506,13 +1511,13 @@
         <div class="container">
             <div id="price" class="price-box" style="padding: 40px;">
                 
-                <div style="text-align: left; max-width: 900px; margin: 0 auto 32px auto;">
-                    <p class="type-heading" style="color: #2f2a26; margin-bottom: 24px; text-align: center;">What you get inside:</p>
-                    <ul style="list-style: none; margin: 0; padding: 0;">
-                        <li style="padding: 10px 0 10px 28px; position: relative; line-height: 1.6; font-size: 17px; color: var(--text);"><span style="position: absolute; left: 0; color: var(--yellow); font-weight: 700;">▸</span>6-week guided curriculum for your next-level identity shift in all the most important areas of business</li>
-                        <li style="padding: 10px 0 10px 28px; position: relative; line-height: 1.6; font-size: 17px; color: var(--text);"><span style="position: absolute; left: 0; color: var(--yellow); font-weight: 700;">▸</span>6 weeks of subconscious audios to make the shift easy, fast, and permanent</li>
-                        <li style="padding: 10px 0 10px 28px; position: relative; line-height: 1.6; font-size: 17px; color: var(--text);"><span style="position: absolute; left: 0; color: var(--yellow); font-weight: 700;">▸</span>Private audio vault (lifetime access)</li>
-                        <li style="padding: 10px 0 10px 28px; position: relative; line-height: 1.6; font-size: 17px; color: var(--text);"><span style="position: absolute; left: 0; color: var(--yellow); font-weight: 700;">▸</span>Weekly guidance + my email support throughout your 6 weeks</li>
+                <div class="inside-menu" style="text-align: center; max-width: 900px; margin: 0 auto 36px auto;">
+                    <p class="type-heading" style="color: #2f2a26; margin-bottom: 26px; text-align: center;">What you get inside:</p>
+                    <ul class="menu-list">
+                        <li>6-week guided curriculum for your next-level identity shift</li>
+                        <li>6 weeks of subconscious audios to make the shift easy, fast, and permanent</li>
+                        <li>Private audio vault (lifetime access)</li>
+                        <li>Weekly guidance + my email support throughout your 6 weeks</li>
                     </ul>
                 </div>
                 
