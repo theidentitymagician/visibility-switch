@@ -1076,6 +1076,21 @@
         .vs-call-price { font-family: 'DM Sans', sans-serif !important; font-size: 20px !important; font-weight: 500; }
         .vs-only h2 { font-size: inherit !important; }
         @media (max-width: 768px) { h2, h2.black, .type-heading { font-size: 24px !important; } h2.mega { font-size: 26px !important; } h3 { font-size: 19px !important; } h3.module-title { font-size: 18px !important; } .module-number, .module-box p { font-size: 18px !important; } }
+
+        /* === 25 OCT: investment section + closing statement === */
+        #price { margin-top: 0 !important; padding-top: 0 !important; }
+        .section-invest > .container { padding-top: 28px !important; }
+        #price ul li { font-size: 18px !important; }
+        #price > p, .vs-code-note, .vs-call-note { font-size: 18px !important; }
+        .old-price { font-size: 46px !important; line-height: 1.1 !important; margin: 6px 0 0 !important; }
+        .price-amount { line-height: 1.1 !important; margin: 2px 0 10px !important; }
+        .price-pre { font-family: 'Playfair Display', serif; font-weight: 400; font-style: italic; font-size: 0.42em; vertical-align: middle; margin-right: 6px; color: #3b2416; }
+        .section-know { position: relative; overflow: hidden; background: #2a1d12; padding: 70px 20px; text-align: center; }
+        .section-know .know-bg { position: absolute; left: 0; right: 0; top: -15%; height: 130%; background: linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.42)), url('nlft-hero.jpg') center 80%/cover no-repeat; will-change: transform; z-index: 0; }
+        .section-know > .container { position: relative; z-index: 1; max-width: 760px; }
+        .section-know p, .section-know strong { color: #fff !important; text-shadow: 0 2px 3px rgba(0,0,0,0.95), 0 3px 12px rgba(0,0,0,0.9), 0 0 28px rgba(0,0,0,0.85); }
+        .section-know p:first-child strong { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 34px; line-height: 1.25; display: block; margin-bottom: 8px; }
+        @media (max-width: 768px) { .old-price { font-size: 34px !important; } .section-know { padding: 50px 20px; } .section-know p:first-child strong { font-size: 26px; } }
     </style>
 </head>
 <body>
@@ -1453,7 +1468,7 @@
     </div>
 
     <!-- SECTION 9: INVESTMENT (Beige, full width) -->
-    <div class="section-beige">
+    <div class="section-beige section-invest">
         <div class="container">
             <div id="price" class="price-box" style="padding: 40px;">
                 
@@ -1471,7 +1486,7 @@
                 
                 <p class="vs-member-label">Your Visibility Switch™ member investment</p>
                 <div class="old-price">$997</div>
-                <div class="price-amount">$497</div>
+                <div class="price-amount"><span class="price-pre">Only now for</span> $497</div>
                 <p style="font-size: 18px; color: #3b2416; margin-top: 4px; margin-bottom: 10px; font-weight: 600;">with the code</p>
                 <button type="button" class="vs-code-btn" id="vsCodeBtn" onclick="vsCopyCode(this)">SWITCH</button>
                 <p class="vs-code-note">Tap to copy. Pay in full. Ends Monday 9 November, 23:59 CET.<br><span class="vs-tz">5:59 pm ET · 4:59 pm CT · 2:59 pm PT · 9:59 am AEDT (Tue 10 Nov)</span></p>
@@ -1482,12 +1497,17 @@
                 <p class="cta-subtext" style="margin-top: 24px; margin-bottom: 0; font-size: 18px;">Get the full framework that my clients use to hit $20K - $60K months<br>and skyrocket their businesses in the shortest amount of time.</p>
             </div>
             
-            <div style="text-align: center; margin-top: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                <p style="font-size: 20px; line-height: 1.7; margin-bottom: 16px;"><strong style="color: #3b2416 !important;">You already know this is your next level.</strong></p>
+        </div>
+    </div>
+
+    <!-- SECTION 9b: YOU ALREADY KNOW (image) -->
+    <div class="section-know">
+        <div class="know-bg" aria-hidden="true"></div>
+        <div class="container">
+                <p style="font-size: 20px; line-height: 1.7; margin-bottom: 16px;"><strong>You already know this is your next level.</strong></p>
                 <p style="font-size: 18px; line-height: 1.8; margin-bottom: 16px;">One $15K client pays this back 30x.<br>Reaching $30K months changes your life forever (and it only gets better from there).</p>
                 <p style="font-size: 18px; line-height: 1.8; margin-bottom: 16px;">The question is not whether you can "afford" the investment.<br>It's whether you can afford to <strong>delay that next level</strong> for yet another year, month, or week.</p>
                 <p style="font-size: 20px; line-height: 1.7;"><strong>And you know the answer already, don't you?</strong></p>
-            </div>
         </div>
     </div>
     
@@ -1702,7 +1722,10 @@ function vsCopyCode(btn){
     }
     ticking=false;
   }
-  window.addEventListener('scroll',function(){ if(!ticking){ticking=true; requestAnimationFrame(update);} },{passive:true});
+  var kn=document.querySelector('.section-know'), kbg=kn&&kn.querySelector('.know-bg');
+  function updK(){ if(!kbg) return; var r=kn.getBoundingClientRect(), vh=window.innerHeight; if(r.bottom>0 && r.top<vh){ var t=(r.top+r.height/2-vh/2); kbg.style.transform='translate3d(0,'+(t*-0.25)+'px,0)'; } }
+  window.addEventListener('scroll',function(){ if(!ticking){ticking=true; requestAnimationFrame(function(){update(); updK();});} },{passive:true});
+  updK();
   update();
 })();
 </script>
