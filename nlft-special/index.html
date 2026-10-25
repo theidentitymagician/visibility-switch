@@ -1103,6 +1103,16 @@
         .section-statement h2, .section-statement h2 span, .section-statement h2 em, .section-statement p { color: #fff !important; text-shadow: 0 1px 2px #000, 0 2px 4px rgba(0,0,0,0.95), 0 4px 14px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.85), 0 0 60px rgba(0,0,0,0.7); }
         .section-statement p { opacity: 1 !important; }
         @media (max-width: 768px) { .section-statement { padding: 56px 20px !important; } }
+        .section-final { position: relative; overflow: hidden; background: #26221f; padding: 110px 20px 120px; text-align: center; }
+        .section-final .final-bg { position: absolute; left: 0; right: 0; top: -15%; height: 130%; background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('nlft-final.jpg') center 40%/cover no-repeat; will-change: transform; z-index: 0; }
+        .section-final > .container { position: relative; z-index: 1; }
+        .section-final .final-cta { background: transparent !important; padding: 0 !important; }
+        .section-final .big-text, .section-final .medium-text { color: #fff !important; text-shadow: 0 1px 2px #000, 0 2px 4px rgba(0,0,0,0.95), 0 4px 14px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.85), 0 0 60px rgba(0,0,0,0.7); }
+        .section-final .big-text { font-family: 'Playfair Display', serif !important; font-weight: 400 !important; font-size: 46px !important; }
+        .section-final .medium-text { font-size: 21px !important; }
+        .section-final .cta-button { background: #e2a714 !important; color: #1c1916 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.45); }
+        .section-final .cta-button:hover { background: #ffd700 !important; }
+        @media (max-width: 768px) { .section-final { padding: 70px 20px 80px; } .section-final .big-text { font-size: 30px !important; } .section-final .medium-text { font-size: 18px !important; } }
     </style>
 </head>
 <body>
@@ -1689,8 +1699,9 @@
         </div>
     </div>
     
-    <!-- SECTION 12: FINAL CTA (Beige) -->
-    <div class="section-beige">
+    <!-- SECTION 12: FINAL CTA (image) -->
+    <div class="section-final">
+        <div class="final-bg" aria-hidden="true"></div>
         <div class="container">
             <div class="final-cta">
                 <p class="big-text" style="margin-bottom: 16px;">You already know what you want.</p>
@@ -1742,6 +1753,9 @@ function vsCopyCode(btn){
   var st=document.querySelector('.section-statement'), sbg=st&&st.querySelector('.statement-bg');
   function updS(){ if(!sbg) return; var r=st.getBoundingClientRect(), vh=window.innerHeight; if(r.bottom>0 && r.top<vh){ sbg.style.transform='translate3d(0,'+((r.top+r.height/2-vh/2)*-0.25)+'px,0)'; } }
   window.addEventListener('scroll',function(){ requestAnimationFrame(updS); },{passive:true}); updS();
+  var fn=document.querySelector('.section-final'), fbg=fn&&fn.querySelector('.final-bg');
+  function updF(){ if(!fbg) return; var r=fn.getBoundingClientRect(), vh=window.innerHeight; if(r.bottom>0 && r.top<vh){ fbg.style.transform='translate3d(0,'+((r.top+r.height/2-vh/2)*-0.25)+'px,0)'; } }
+  window.addEventListener('scroll',function(){ requestAnimationFrame(updF); },{passive:true}); updF();
   update();
 })();
 </script>
