@@ -1097,6 +1097,12 @@
         @media (max-width: 768px) { .old-price { font-size: 34px !important; } .section-know { padding: 50px 20px; } .section-know p:first-child strong { font-size: 34px !important; } .section-know br.dk { display: none; } .section-know p, .section-know strong { font-size: 19px !important; } }
         .section-support h2 { margin-bottom: 18px !important; }
         .section-support .highlight-box { margin-top: 0 !important; padding-top: 0 !important; }
+        .section-statement { position: relative; overflow: hidden; background: #2a1d12 !important; padding: 80px 20px !important; }
+        .section-statement .statement-bg { position: absolute; left: 0; right: 0; top: -15%; height: 130%; background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('nlft-statement.jpg') center/cover no-repeat; will-change: transform; z-index: 0; }
+        .section-statement > .container { position: relative; z-index: 1; }
+        .section-statement h2, .section-statement h2 span, .section-statement h2 em, .section-statement p { color: #fff !important; text-shadow: 0 1px 2px #000, 0 2px 4px rgba(0,0,0,0.95), 0 4px 14px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.85), 0 0 60px rgba(0,0,0,0.7); }
+        .section-statement p { opacity: 1 !important; }
+        @media (max-width: 768px) { .section-statement { padding: 56px 20px !important; } }
     </style>
 </head>
 <body>
@@ -1334,7 +1340,8 @@
     
     <!-- SECTION 6 PLACEHOLDER -->
     <!-- SECTION 6: IDENTITY UPGRADE STATEMENT (Brown) -->
-    <div class="section-brown">
+    <div class="section-brown section-statement">
+        <div class="statement-bg" aria-hidden="true"></div>
         <div class="container">
             <div style="text-align: center;">
                 <h2 class="mega" style="color: var(--white);">
@@ -1732,6 +1739,9 @@ function vsCopyCode(btn){
   function updK(){ if(!kbg) return; var r=kn.getBoundingClientRect(), vh=window.innerHeight; if(r.bottom>0 && r.top<vh){ var t=(r.top+r.height/2-vh/2); kbg.style.transform='translate3d(0,'+(t*-0.25)+'px,0)'; } }
   window.addEventListener('scroll',function(){ if(!ticking){ticking=true; requestAnimationFrame(function(){update(); updK();});} },{passive:true});
   updK();
+  var st=document.querySelector('.section-statement'), sbg=st&&st.querySelector('.statement-bg');
+  function updS(){ if(!sbg) return; var r=st.getBoundingClientRect(), vh=window.innerHeight; if(r.bottom>0 && r.top<vh){ sbg.style.transform='translate3d(0,'+((r.top+r.height/2-vh/2)*-0.25)+'px,0)'; } }
+  window.addEventListener('scroll',function(){ requestAnimationFrame(updS); },{passive:true}); updS();
   update();
 })();
 </script>
