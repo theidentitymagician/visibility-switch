@@ -1004,6 +1004,8 @@
         .vs-bar strong { color: #fff; }
         .vs-bar .vs-code { background: var(--yellow); color: #000; font-weight: 700; padding: 2px 8px; border-radius: 3px; letter-spacing: 0.12em; }
         .vs-bar .vs-count { font-weight: 700; white-space: nowrap; }
+        .vs-bar .vs-bar-bonus { display: block; margin-top: 4px; font-size: 13px; letter-spacing: 0.03em; }
+        .bonus-nudge { display: block; width: fit-content; font-size: 15px !important; line-height: 1.45 !important; margin: 16px auto 0 !important; padding: 8px 16px; border-radius: 999px; background: #fff3c4; color: #2f2a26 !important; font-weight: 700; text-align: center; max-width: 520px; }
         .vs-eyebrow { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.3em;
             text-transform: uppercase; color: var(--red); margin-bottom: 18px; }
         .vs-only { background: var(--red); color: #fff; }
@@ -1024,9 +1026,13 @@
         .vs-call-price strong { color: var(--red) !important; }
         .vs-call-old { text-decoration: line-through; color: #8a8478 !important; margin-right: 6px; }
         .vs-call-note { font-size: 16px; color: #000; max-width: 560px; margin: -10px auto 26px; line-height: 1.6; }
+        .vs-bonus { max-width: 600px; margin: 0 auto 28px; padding: 20px 24px; border: 2px solid #b8962e; border-radius: 14px; background: #fffaf0; text-align: center; }
+        .vs-bonus-title { font-size: 20px; font-weight: 700; color: #2f2a26; margin: 0 0 8px; letter-spacing: .5px; }
+        .vs-bonus p.vs-bonus-text { font-size: 17px !important; line-height: 1.6; color: #2f2a26; margin: 0; }
+        .vs-bonus p.vs-bonus-small { font-size: 15px !important; color: #6b625a; margin: 8px 0 0; font-style: italic; }
         .vs-closed-note { display: none; }
         body.vs-closed .vs-closed-note { display: block; }
-        body.vs-closed a.cta-button, body.vs-closed a.cta-button-yellow, body.vs-closed .vs-open-only { display: none !important; }
+        body.vs-closed a.cta-button, body.vs-closed a.cta-button-yellow, body.vs-closed .vs-open-only, body.vs-closed .bonus-nudge, body.vs-closed .vs-bonus { display: none !important; }
         @media (max-width: 600px) { .vs-call-price { font-size: 20px; } .vs-bar { font-size: 12.5px; } .vs-only p { font-size: 17px; } .vs-only .vs-punch { font-size: 22px; } }
 
         /* === PREMIUM PASS 24 OCT === */
@@ -1181,6 +1187,7 @@
 <body>
     <div class="vs-bar">
         <span class="vs-open-only"><strong>THE VISIBILITY SWITCH™ MEMBERS ONLY</strong> · code <span class="vs-code">SWITCH</span> · ends in <span class="vs-count" id="vsCount">…</span></span>
+        <span class="vs-open-only vs-bar-bonus">🎁 <strong>First 10 people:</strong> a personal social media audit + voice note from me</span>
         <span class="vs-closed-note">This special closed on <span style="white-space:nowrap">Friday 13 November</span>.</span>
     </div>
 
@@ -1276,6 +1283,7 @@
             
             <div class="cta-wrapper">
                 <a href="https://www.kasiarutkowiak.com/nlft-guided-special-payment" class="cta-button">SAY NO MORE, I'M IN!</a>
+                <p class="bonus-nudge">🎁 First 10 people only: my personal audit of your social media + a voice note from me</p>
                 <p class="vip-nudge">Want me one-on-one instead? Only 2 spots. <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7JuMC83l1NYeWAXivZ6E00KK5-XoDG10XbpdPrC7-t7a7RQ/viewform" target="_blank" rel="noopener">Apply for VIP</a></p>
             </div>
         </div>
@@ -1428,7 +1436,8 @@
                 
                 <div class="cta-wrapper" style="margin-top: 20px; margin-bottom: 8px;">
                     <a href="https://www.kasiarutkowiak.com/nlft-guided-special-payment" class="cta-button-yellow">I WANT IN!</a>
-                    <p class="vip-nudge">Want me one-on-one instead? Only 2 spots. <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7JuMC83l1NYeWAXivZ6E00KK5-XoDG10XbpdPrC7-t7a7RQ/viewform" target="_blank" rel="noopener">Apply for VIP</a></p>
+                    <p class="bonus-nudge">🎁 First 10 people only: my personal audit of your social media + a voice note from me</p>
+                <p class="vip-nudge">Want me one-on-one instead? Only 2 spots. <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7JuMC83l1NYeWAXivZ6E00KK5-XoDG10XbpdPrC7-t7a7RQ/viewform" target="_blank" rel="noopener">Apply for VIP</a></p>
                 </div>
                 <p style="font-size: 18px; font-style: italic; color: var(--white); opacity: 0.9;">I'm ready to stop circling and 3-5x my revenue without delay!</p>
             </div>
@@ -1582,7 +1591,14 @@
                 <p class="vs-code-note">Tap to copy. Ends <span style="white-space:nowrap">Friday 13 November</span>, 23:59 CET.<br><span class="vs-tz">10:59 pm UK · 5:59 pm Eastern · 4:59 pm Central · 2:59 pm Pacific · 9:59 am Sydney (Sat 14 Nov)</span></p>
                 <p class="vs-call-note">Want my eyes on your business too?<br>Add a Quantum Catalyst Session at checkout: <span style="white-space:nowrap"><strong>$499</strong> instead of <s style="color:#8a8478">$750</s>.</span></p>
                 
+                <div class="vs-bonus">
+                    <p class="vs-bonus-title">🎁 FIRST 10 PEOPLE ONLY</p>
+                    <p class="vs-bonus-text">Join as one of the first 10 people, and you get my personal audit of your social media, focused on the energetics and how you show up, plus a voice note from me based on what I see.</p>
+                    <p class="vs-bonus-small">No extra code required.</p>
+                </div>
+
                 <a href="https://www.kasiarutkowiak.com/nlft-guided-special-payment" class="cta-button" style="margin: 0;">I WANT THIS OFFER NOW</a>
+                <p class="bonus-nudge">🎁 First 10 people only: my personal audit of your social media + a voice note from me</p>
                 <p class="vip-nudge">Want me one-on-one instead? Only 2 spots. <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7JuMC83l1NYeWAXivZ6E00KK5-XoDG10XbpdPrC7-t7a7RQ/viewform" target="_blank" rel="noopener">Apply for VIP</a></p>
                 
                 <p class="cta-subtext" style="margin-top: 24px; margin-bottom: 0; font-size: 18px;">Get the full framework my clients use to hit $25K–$50K months<br class="dk"> and grow their business in the shortest amount of time.</p>
@@ -1777,6 +1793,7 @@
                 <p class="big-text" style="margin-bottom: 0;">Now let's turn you into the person who makes it happen!</p>
                 
                 <a href="https://www.kasiarutkowiak.com/nlft-guided-special-payment" class="cta-button" style="margin: 44px 0 0;">YES, PLEASE!</a>
+                <p class="bonus-nudge">🎁 First 10 people only: my personal audit of your social media + a voice note from me</p>
                 <p class="vip-nudge">Want me one-on-one instead? Only 2 spots. <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7JuMC83l1NYeWAXivZ6E00KK5-XoDG10XbpdPrC7-t7a7RQ/viewform" target="_blank" rel="noopener">Apply for VIP</a></p>
             </div>
         </div>
