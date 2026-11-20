@@ -191,6 +191,14 @@ footer a{color:#999;text-decoration:none}
   .about img{max-width:280px}
   .final{min-height:auto}
 }
+.zig{max-width:920px;margin:2.6rem auto 0;display:grid;gap:3.4rem}
+.zrow{display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:center}
+.zrow.rev{grid-template-columns:320px 1fr}
+.zrow>*{min-width:0}
+.ztext p{font-size:var(--body)}
+.ztext p:last-child{margin-bottom:0}
+.zrow img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border:1px solid rgba(255,215,0,.6);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+@media (max-width:820px){.zig{gap:2.4rem;margin-top:1.8rem}.zrow,.zrow.rev{grid-template-columns:1fr;gap:1.6rem}.zrow img{max-width:420px;margin:0 auto}.zrow.rev img{order:2}}
 </style>
 </head>
 <body>
@@ -218,11 +226,21 @@ footer a{color:#999;text-decoration:none}
 <section class="red story">
   <div class="wrap">
     <h2>Whatever excuse you're using to hide,<br class="dbr"> <em>I've used it</em></h2>
-    <div class="narrow">
+    <div class="zig">
+      <div class="zrow">
+        <div class="ztext">
       <p>My looks, my accent, my English, "after this launch", "once we've moved"… I've talked myself out of showing up more times than I can count.</p>
       <p>I've hidden in more creative ways than you can imagine, so I'm the last person who'll ever judge you for it.</p>
+        </div>
+        <img src="../img/vs-excuse-1.jpg" alt="Kasia at her desk, looking at her phone" loading="lazy">
+      </div>
+      <div class="zrow rev">
+        <img src="../img/vs-excuse-2.jpg" alt="Kasia at her desk, filming herself on her phone" loading="lazy">
+        <div class="ztext">
       <p>I get to work with my dream clients today for one simple reason: I did exactly what I'm about to share with you, so that I could start showing up for my clients, for my business and for the ripple I wanted to create.</p>
       <p>Now I'll help you finally let yourself be seen, so your ripple can begin and your dream clients start finding you, signing with you and paying you, just like mine do.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
