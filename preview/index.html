@@ -225,7 +225,7 @@ u{text-decoration-thickness:1px;text-underline-offset:.18em}
 .offer .offer-right{text-align:center;display:flex;flex-direction:column;align-items:center}
 .offer .offer-right .proof{margin:0 auto .5rem}
 .offer .offer-right .cta{align-self:center}
-@media (min-width:821px){.offer{grid-template-columns:1fr 1fr;gap:2.4rem}.offer .img{justify-self:end;width:100%;max-width:460px}}
+@media (min-width:821px){.offer{grid-template-columns:1fr 1fr;gap:2.4rem;align-items:stretch}.offer .img{justify-self:end;width:100%;max-width:460px;align-self:start}.offer .offer-right{justify-content:space-between}.offer .offer-right .proof{max-width:340px}.offer .offer-right .cap{margin-bottom:0}.offer .proofwrap{display:flex;flex-direction:column;align-items:center}.offer .offer-right .price{margin:0;line-height:1}.offer .offer-right>*{margin-top:0}}
 .marquee .mq-row{overflow:hidden;padding:.35rem 0}
 .mq-l .track{animation:scroll 70s linear infinite}
 .mq-r .track{animation:scrollR 80s linear infinite}
@@ -387,8 +387,7 @@ u{text-decoration-thickness:1px;text-underline-offset:.18em}
   <div class="wrap offer">
     <div class="img"><img src="../img/vs-product.jpg" alt="A phone, notebook, camera and coffee on a marble desk"></div>
     <div class="offer-right">
-      <img class="proof" src="../img/vs-testimonial.jpg" alt="Client message: I finally got the courage to actively sell my new program in my IG live and boom, 3 new clients and $4500 cash on my account.">
-      <p class="cap">A client message, shared with permission.</p>
+      <div class="proofwrap"><img class="proof" src="../img/vs-testimonial.jpg" alt="Client message: I finally got the courage to actively sell my new program in my IG live and boom, 3 new clients and $4500 cash on my account."><p class="cap">A client message, shared with permission.</p></div>
       <p class="access">Instant access in your podcast app of choice</p>
       <a href="https://www.kasiarutkowiak.com/visibility-switch" class="cta">Yes, switch me on!</a>
       <p class="price"><b>$47</b>one-time payment</p>
