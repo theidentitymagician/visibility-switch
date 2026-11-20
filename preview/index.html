@@ -36,6 +36,11 @@ h2{font-family:'Playfair Display',serif;font-weight:400;font-size:var(--h2);line
 h2 em{font-style:italic}
 section{padding:4.2rem 0}
 .light{background:#fff;color:#000}
+.light,.light *,.cream,.cream *{color:#000}
+.red,.red *,.dark,.dark *{color:#fff}
+.light .label,.cream .label{color:var(--deep)}
+.about .cred{color:var(--gold)!important}
+.offer .cap{color:#cfcfcf!important}
 .cream{background:var(--cream);color:#000}
 .dark{background:#000;color:#fff}
 .red{background:var(--red);color:#fff}
@@ -63,17 +68,17 @@ p+p{margin-top:1rem}
 .hero .micro{margin-top:1.3rem}
 
 /* RED BAND */
-.red .big{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.3;margin-bottom:1.4rem}
-.red .big em{font-style:italic}
-.red .big strong{font-weight:500;color:var(--bright)}
-.red p{max-width:900px;margin-left:auto;margin-right:auto}
-.red .wrap{max-width:1360px}
-.red .rn{font-size:clamp(1.2rem,1.75vw,1.45rem);max-width:1100px}
+.statement .big{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.3;margin-bottom:1.4rem}
+.statement .big em{font-style:italic}
+.statement .big strong{font-weight:500;color:var(--bright)}
+.statement p{max-width:900px;margin-left:auto;margin-right:auto}
+.statement .wrap{max-width:1360px}
+.statement .rn{font-size:clamp(1.2rem,1.75vw,1.45rem);max-width:1100px}
 body em{padding-right:.06em}
 h1 em,h2 em,.big em{padding-right:0}
-.red .big .gap{display:block;height:.5em}
-.red .big{max-width:none;margin-top:.2rem;font-size:clamp(1.6rem,2.6vw,2.3rem)}
-@media (min-width:821px){.red .big span{white-space:nowrap}}
+.statement .big .gap{display:block;height:.5em}
+.statement .big{max-width:none;margin-top:.2rem;font-size:clamp(1.6rem,2.6vw,2.3rem)}
+@media (min-width:821px){.statement .big span{white-space:nowrap}}
 .red .opener{font-family:'Playfair Display',serif;font-style:italic;color:var(--bright);font-size:clamp(1.25rem,2vw,1.6rem);margin-bottom:.2rem}
 
 /* STORY */
@@ -202,7 +207,7 @@ footer a{color:#999;text-decoration:none}
 </section>
 
 <!-- RED BAND -->
-<section class="red center" style="border-top:15px solid #fff">
+<section class="light center statement">
   <div class="wrap">
     <p class="big"><span>Being great at what you do is <em>irrelevant</em></span><br><span>as long as nobody sees&nbsp;you.</span><br><span class="gap"></span><span>We live in a world where being great doesn't pay.</span><br><span>Being <em>seen</em> does.</span></p>
     <p class="rn">Right now, people with <strong>half your talent</strong> are signing <em>your</em> dream clients<br class="dbr"> on the same platform, every single day.<br class="dbr"> The only difference is that they <strong>allow themselves to be seen</strong>.</p>
@@ -210,7 +215,7 @@ footer a{color:#999;text-decoration:none}
 </section>
 
 <!-- I'VE USED THEM ALL -->
-<section class="light story">
+<section class="cream story">
   <div class="wrap">
     <h2>Whatever excuse you're using to hide,<br class="dbr"> <em>I've used it</em></h2>
     <div class="narrow">
@@ -223,7 +228,7 @@ footer a{color:#999;text-decoration:none}
 </section>
 
 <!-- THE SHIFT -->
-<section class="cream story">
+<section class="red story">
   <div class="wrap">
     <h2>This is <em>not</em> a camera confidence course,<br class="dbr"> because you don't need one.</h2>
     <div class="narrow">
@@ -236,7 +241,7 @@ footer a{color:#999;text-decoration:none}
 </section>
 
 <!-- SWITCHED ON -->
-<section class="dark">
+<section class="light">
   <div class="wrap">
     <h2 class="center">What it looks like when you're <em>switched on</em></h2>
     <ul class="moments">
@@ -250,7 +255,7 @@ footer a{color:#999;text-decoration:none}
 </section>
 
 <!-- WHAT'S INSIDE -->
-<section class="light">
+<section class="cream">
   <div class="wrap">
     <h2 class="center">Three phases to flip <em>the switch</em></h2>
     <div class="phases">
