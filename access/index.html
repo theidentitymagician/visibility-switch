@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>You're in! The Visibility Switch™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#d4af37;--bright:#ffd700;--deep:#9a7a1f;--dark:#2F2A26;--cream:#eeebe3;--body:clamp(1.08rem,1.4vw,1.2rem);--shadow:0 0 2px #000,0 2px 3px rgba(0,0,0,.95),0 4px 10px rgba(0,0,0,.9),0 10px 28px rgba(0,0,0,.85)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;font-size:var(--body);line-height:1.7;color:#000;background:#fff;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1100px;margin:0 auto;padding:0 2rem}
+h1,h2{font-family:'Playfair Display',serif;font-weight:400;line-height:1.15}
+h2{font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:2rem;text-align:center;text-wrap:balance}
+em{font-style:italic}
+p{text-wrap:pretty}
+
+.hero{background:url('../img/vs-access-hero.jpg') center/cover no-repeat fixed;min-height:78vh;display:flex;align-items:center;padding:5vh 6vw}
+.glass{background:rgba(20,17,15,.52);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);position:relative;max-width:900px;margin:0 auto;padding:3.4rem 3rem;text-align:center;color:#fff}
+.glass::before{content:'';position:absolute;inset:14px;border:1px solid rgba(212,175,55,.85);pointer-events:none}
+.eyebrow{display:block;font-size:clamp(1rem,1.4vw,1.2rem);letter-spacing:.3em;text-transform:uppercase;font-weight:700;color:var(--bright);margin-bottom:1.1rem;text-shadow:var(--shadow)}
+.hero h1{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.1rem;text-shadow:var(--shadow)}
+.hero .sub{font-size:clamp(1.1rem,1.7vw,1.35rem);text-shadow:var(--shadow);max-width:640px;margin:0 auto}
+
+.steps-sec{padding:5rem 0}
+.steps{max-width:820px;margin:0 auto;border-top:1px solid rgba(212,175,55,.6);border-bottom:1px solid rgba(212,175,55,.6)}
+.steps>div{display:grid;grid-template-columns:130px 1fr;column-gap:2rem;padding:1.8rem .4rem;align-items:start}
+.steps>div+div{border-top:1px solid rgba(212,175,55,.55)}
+.label{display:block;font-weight:700;font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--deep);padding-top:.35em}
+.steps h3{font-size:clamp(1.2rem,1.6vw,1.35rem);font-weight:700;margin-bottom:.3rem}
+.help{max-width:820px;margin:2.2rem auto 0;text-align:center}
+.help a{color:#000;font-weight:700}
+
+.extra{background:var(--cream);padding:5rem 0}
+.extra .grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;max-width:960px;margin:0 auto}
+.card{background:#fff;border:1px solid rgba(212,175,55,.45);padding:2rem}
+.card h3{font-size:clamp(1.2rem,1.6vw,1.35rem);font-weight:700;margin-bottom:.6rem}
+.card h3::after{content:'';display:block;width:36px;height:1px;background:var(--gold);margin-top:.7rem}
+
+.bye{padding:5rem 0}
+.bye .row{display:grid;grid-template-columns:320px 1fr;gap:3.4rem;align-items:center;max-width:900px;margin:0 auto}
+.bye img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.bye h2{text-align:left;margin-bottom:1.2rem}
+.bye p+p{margin-top:1rem}
+.sign{font-family:'Playfair Display',serif;font-size:1.5rem;margin-top:1.4rem}
+
+footer{text-align:center;padding:2.2rem 0;background:#000}
+footer p{font-size:.85rem;color:#888}
+footer a{color:#888;text-decoration:none}
+
+@media (max-width:820px){
+  .wrap{padding:0 1.4rem}
+  .hero{background-attachment:scroll;min-height:70vh;padding:1.2rem}
+  .glass{padding:2.6rem 1.4rem}
+  .glass::before{inset:9px}
+  .steps>div{grid-template-columns:1fr;padding:1.5rem 0}
+  .label{margin-bottom:.5rem;padding-top:0}
+  .extra .grid,.bye .row{grid-template-columns:1fr}
+  .bye .row{gap:2rem}
+  .bye img{max-width:300px;margin:0 auto}
+  .bye h2{text-align:center}
+  .steps-sec,.extra,.bye{padding:3.6rem 0}
+}
+.dbr{display:inline}
+@media (max-width:820px){.dbr{display:none}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="glass">
+    <span class="eyebrow">The Visibility Switch™</span>
+    <h1>You're in! Welcome to<br class="dbr"> <em>the Switch</em></h1>
+    <p class="sub">Your audios are on their way to your phone. Here's exactly how to press play in the next two minutes.</p>
+  </div>
+</section>
+
+<section class="steps-sec">
+  <div class="wrap">
+    <h2>Three quick steps to <em>get started</em></h2>
+    <div class="steps">
+      <div><span class="label">One</span><div><h3>Open the email from Hello Audio</h3><p>It's on its way to the email address you used at checkout. Open it on your phone. If it's not there within a few minutes, check your Promotions or Spam folder.</p></div></div>
+      <div><span class="label">Two</span><div><h3>Add it to your podcast app</h3><p>Tap the button in that email and choose your podcast app (Apple Podcasts and Pocket Casts work beautifully). The Visibility Switch will show up just like any other podcast.</p></div></div>
+      <div><span class="label">Three</span><div><h3>Start with "Start Here"</h3><p>It takes three minutes, and I'll walk you through how to get the most out of everything inside.</p></div></div>
+    </div>
+    <p class="help">Can't find the Hello Audio email? Write to <a href="mailto:support@theidentitymagician.com">support@theidentitymagician.com</a> and we'll sort it out right away.</p>
+  </div>
+</section>
+
+<section class="extra">
+  <div class="wrap">
+    <h2>Good to <em>know</em></h2>
+    <div class="grid">
+      <div class="card"><h3>Your questions live in the show notes</h3><p>Each phase comes with its questions right under the audio in your podcast app. Answer them before you move on, that's where the biggest shifts happen.</p></div>
+      <div class="card"><h3>14 Days of Showing the F*ck Up</h3><p>Your dares are in a separate doc. You'll find the link in the show notes of the very last track, ready for when you've finished the three phases.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bye">
+  <div class="wrap">
+    <div class="row">
+      <img src="../img/vs-kasia.jpg" alt="Kasia peeking out from behind a pillar, smiling">
+      <div>
+        <h2>See you on the other side of <em>hiding</em></h2>
+        <p>I'm so proud of you for saying yes to yourself today. Take it one phase at a time, answer the questions, do the action, and watch what happens.</p>
+        <p>Your dream clients are waiting to find you.</p>
+        <p class="sign">🪄 Kasia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><p>&copy; 2026 Kasia Rutkowiak | <a href="https://www.kasiarutkowiak.com/privacy">Privacy</a> | <a href="https://www.kasiarutkowiak.com/terms">Terms</a></p></footer>
+
+</body>
+</html>
