@@ -226,6 +226,13 @@ u{text-decoration-thickness:1px;text-underline-offset:.18em}
 .offer .offer-right .proof{margin:0 auto .5rem}
 .offer .offer-right .cta{align-self:center}
 @media (min-width:821px){.offer{grid-template-columns:1fr 1fr;gap:2.4rem}.offer .img{justify-self:end;width:100%;max-width:460px}}
+.marquee .mq-row{overflow:hidden;padding:.35rem 0}
+.mq-l .track{animation:scroll 70s linear infinite}
+.mq-r .track{animation:scrollR 80s linear infinite}
+.mq-slow .track{animation-duration:92s}
+@keyframes scrollR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.marquee:hover .track{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}}
 </style>
 </head>
 <body>
@@ -393,12 +400,11 @@ u{text-decoration-thickness:1px;text-underline-offset:.18em}
   <div class="wrap">
     <h2>This is for you if your business<br class="dbr"> requires you to <em>show up</em></h2>
   </div>
-  <div class="marquee" aria-label="Coaches, consultants, therapists and healers, course creators, real estate agents, designers, estheticians, photographers, agency owners, speakers, local businesses with an online presence">
-    <div class="track">
-      <span>Coaches</span><span>Consultants</span><span>Therapists &amp; healers</span><span>Course creators</span><span>Real estate agents</span><span>Designers</span><span>Estheticians</span><span>Photographers</span><span>Agency owners</span><span>Speakers</span><span>Doctors</span><span>Lawyers</span><span>Accountants</span><span>Personal trainers</span><span>Authors</span><span>Creatives</span><span>Financial advisors</span><span>Local businesses with an online presence</span>
-      <span>Coaches</span><span>Consultants</span><span>Therapists &amp; healers</span><span>Course creators</span><span>Real estate agents</span><span>Designers</span><span>Estheticians</span><span>Photographers</span><span>Agency owners</span><span>Speakers</span><span>Doctors</span><span>Lawyers</span><span>Accountants</span><span>Personal trainers</span><span>Authors</span><span>Creatives</span><span>Financial advisors</span><span>Local businesses with an online presence</span>
+  <div class="marquee" aria-label="Coaches, dentists, consultants, course creators, doctors, lawyers, therapists and healers, real estate agents, accountants, personal trainers, designers, agency owners, speakers, estheticians, creatives, financial advisors, photographers, authors, local businesses with an online presence">
+      <div class="mq-row mq-l" aria-hidden="true"><div class="track"><span>Coaches</span><span>Dentists</span><span>Consultants</span><span>Course creators</span><span>Doctors</span><span>Lawyers</span><span>Coaches</span><span>Dentists</span><span>Consultants</span><span>Course creators</span><span>Doctors</span><span>Lawyers</span><span>Coaches</span><span>Dentists</span><span>Consultants</span><span>Course creators</span><span>Doctors</span><span>Lawyers</span><span>Coaches</span><span>Dentists</span><span>Consultants</span><span>Course creators</span><span>Doctors</span><span>Lawyers</span></div></div>
+      <div class="mq-row mq-r" aria-hidden="true"><div class="track"><span>Therapists &amp; healers</span><span>Real estate agents</span><span>Accountants</span><span>Personal trainers</span><span>Designers</span><span>Agency owners</span><span>Speakers</span><span>Therapists &amp; healers</span><span>Real estate agents</span><span>Accountants</span><span>Personal trainers</span><span>Designers</span><span>Agency owners</span><span>Speakers</span><span>Therapists &amp; healers</span><span>Real estate agents</span><span>Accountants</span><span>Personal trainers</span><span>Designers</span><span>Agency owners</span><span>Speakers</span><span>Therapists &amp; healers</span><span>Real estate agents</span><span>Accountants</span><span>Personal trainers</span><span>Designers</span><span>Agency owners</span><span>Speakers</span></div></div>
+      <div class="mq-row mq-l mq-slow" aria-hidden="true"><div class="track"><span>Estheticians</span><span>Creatives</span><span>Financial advisors</span><span>Photographers</span><span>Authors</span><span>Local businesses with an online presence</span><span>Estheticians</span><span>Creatives</span><span>Financial advisors</span><span>Photographers</span><span>Authors</span><span>Local businesses with an online presence</span><span>Estheticians</span><span>Creatives</span><span>Financial advisors</span><span>Photographers</span><span>Authors</span><span>Local businesses with an online presence</span><span>Estheticians</span><span>Creatives</span><span>Financial advisors</span><span>Photographers</span><span>Authors</span><span>Local businesses with an online presence</span></div></div>
     </div>
-  </div>
   <div class="wrap">
     <p class="narrow">Whatever your business is, if you use any form of online visibility to build your brand and attract clients, you will absolutely love this.</p>
   </div>
