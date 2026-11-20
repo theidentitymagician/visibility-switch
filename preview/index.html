@@ -202,6 +202,14 @@ footer a{color:#999;text-decoration:none}
 .story h2.zhead{font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:clamp(1.3rem,1.8vw,1.55rem);line-height:1.4;text-align:left;margin-bottom:1.1rem;letter-spacing:0;text-wrap:wrap;max-width:none}
 
 u{text-decoration-thickness:1px;text-underline-offset:.18em}
+.faq details.q{border-bottom:1px solid rgba(184,149,46,.45);padding:0}
+.faq details.q:first-of-type{border-top:1px solid rgba(184,149,46,.45)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1.2rem;padding:1.35rem 0;font-weight:700;font-size:clamp(1.12rem,1.5vw,1.25rem);line-height:1.45;-webkit-tap-highlight-color:transparent}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font-family:'Playfair Display',serif;font-weight:400;font-size:2rem;line-height:1;color:var(--deep);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details .a{padding:0 0 1.4rem}
+.faq details .a p:last-child{margin-bottom:0}
 </style>
 </head>
 <body>
@@ -406,32 +414,42 @@ u{text-decoration-thickness:1px;text-underline-offset:.18em}
 <section class="light">
   <div class="wrap faq">
     <h2>Your <em>questions</em></h2>
-    <div class="q">
-      <h3>I hate seeing myself on camera. Is this really for me?</h3>
+    <details class="q">
+      <summary>I hate seeing myself on camera. Is this really for me?</summary>
+      <div class="a">
       <p>Then it's made for you! Instead of camera tips, we change what's going on in your head and in your body, so showing up stops being the scary (or cringy) part.</p>
-    </div>
-    <div class="q">
-      <h3>Will this work for me if I have a local, brick-and-mortar business?</h3>
+      </div>
+    </details>
+    <details class="q">
+      <summary>Will this work for me if I have a local, brick-and-mortar business?</summary>
+      <div class="a">
       <p>If you know that becoming visible online would bring more ideal clients through your door, then yes, absolutely!</p>
       <p>This is exactly what will help you start showing up for them.</p>
-    </div>
-    <div class="q">
-      <h3>I'm not on Instagram (or I barely post at all). Will it work for me?</h3>
+      </div>
+    </details>
+    <details class="q">
+      <summary>I'm not on Instagram (or I barely post at all). Will it work for me?</summary>
+      <div class="a">
       <p>Yes, because the platform is irrelevant. LinkedIn, YouTube, TikTok or anything else, this works wherever you want to be seen.</p>
       <p>It can even help you appear on other people's podcasts, in Facebook groups, or wherever that visibility would benefit your business.</p>
-    </div>
-    <div class="q">
-      <h3>How much time do I need?</h3>
+      </div>
+    </details>
+    <details class="q">
+      <summary>How much time do I need?</summary>
+      <div class="a">
       <p>Each phase is one audio (around 25 minutes), a handful of questions (45 minutes, tops) plus a short action.</p>
       <p>I recommend not rushing it: one phase a day, or two days if that feels better.</p>
       <p>And if "I don't have time" was the first thing that popped into your head… that's your brain doing its job. Phase One has a lot to say about that 😜.</p>
-    </div>
-    <div class="q">
-      <h3>How do I get access?</h3>
+      </div>
+    </details>
+    <details class="q">
+      <summary>How do I get access?</summary>
+      <div class="a">
       <p>The moment you submit the payment, you'll get an email with your private link.</p>
       <p>Just open it on your phone, tap the button, and The Visibility Switch will land in your podcast app of choice.</p>
       <p>No portals, logins, or passwords to forget, and full access at your fingertips.</p>
-    </div>
+      </div>
+    </details>
   </div>
 </section>
 
