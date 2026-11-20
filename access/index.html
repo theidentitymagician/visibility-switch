@@ -19,18 +19,19 @@ em{font-style:italic}
 p{text-wrap:pretty}
 
 .hero{background:url('../img/vs-access-hero.jpg') center/cover no-repeat fixed;min-height:78vh;display:flex;align-items:center;padding:5vh 6vw}
-.glass{background:rgba(20,17,15,.52);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);position:relative;max-width:900px;margin:0 auto;padding:3.4rem 3rem;text-align:center;color:#fff}
+.glass{background:rgba(20,17,15,.52);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);position:relative;width:min(900px,100%);aspect-ratio:16/9;display:flex;flex-direction:column;justify-content:center;align-items:center;margin:0 auto;padding:3rem;text-align:center;color:#fff}
 .glass::before{content:'';position:absolute;inset:14px;border:1px solid rgba(212,175,55,.85);pointer-events:none}
-.eyebrow{display:block;font-size:clamp(1rem,1.4vw,1.2rem);letter-spacing:.3em;text-transform:uppercase;font-weight:700;color:var(--bright);margin-bottom:1.1rem;text-shadow:var(--shadow)}
-.hero h1{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.1rem;text-shadow:var(--shadow)}
-.hero .sub{font-size:clamp(1.1rem,1.7vw,1.35rem);text-shadow:var(--shadow);max-width:640px;margin:0 auto}
+.eyebrow{display:block;font-size:clamp(1.1rem,1.7vw,1.45rem);letter-spacing:.3em;text-transform:uppercase;font-weight:700;color:var(--bright);margin-bottom:1.1rem;text-shadow:var(--shadow)}
+.hero h1{font-size:clamp(3rem,6.5vw,5.6rem);margin-bottom:1.1rem;text-shadow:var(--shadow)}
+.hero .sub{font-size:clamp(1.25rem,2.1vw,1.7rem);text-shadow:var(--shadow);max-width:640px;margin:0 auto}
 
 .steps-sec{padding:5rem 0}
 .steps{max-width:820px;margin:0 auto;border-top:1px solid rgba(212,175,55,.6);border-bottom:1px solid rgba(212,175,55,.6)}
-.steps>div{display:grid;grid-template-columns:130px 1fr;column-gap:2rem;padding:1.8rem .4rem;align-items:start}
+.steps>div{padding:1.8rem 1rem;text-align:center}
 .steps>div+div{border-top:1px solid rgba(212,175,55,.55)}
 .label{display:block;font-weight:700;font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--deep);padding-top:.35em}
-.steps h3{font-size:clamp(1.2rem,1.6vw,1.35rem);font-weight:700;margin-bottom:.3rem}
+.steps h3{font-size:clamp(1.3rem,1.8vw,1.5rem);font-weight:700;margin-bottom:.4rem}
+.steps p{font-size:clamp(1.12rem,1.5vw,1.28rem);max-width:640px;margin:0 auto}
 .help{max-width:820px;margin:2.2rem auto 0;text-align:center}
 .help a{color:#000;font-weight:700}
 
@@ -54,9 +55,9 @@ footer a{color:#888;text-decoration:none}
 @media (max-width:820px){
   .wrap{padding:0 1.4rem}
   .hero{background-attachment:scroll;min-height:70vh;padding:1.2rem}
-  .glass{padding:2.6rem 1.4rem}
+  .glass{padding:2.6rem 1.4rem;aspect-ratio:auto;min-height:56vh}
   .glass::before{inset:9px}
-  .steps>div{grid-template-columns:1fr;padding:1.5rem 0}
+  .steps>div{padding:1.5rem 0}
   .label{margin-bottom:.5rem;padding-top:0}
   .extra .grid,.bye .row{grid-template-columns:1fr}
   .bye .row{gap:2rem}
@@ -66,6 +67,7 @@ footer a{color:#888;text-decoration:none}
 }
 .dbr{display:inline}
 @media (max-width:820px){.dbr{display:none}}
+.card p+p{margin-top:.7rem}
 </style>
 </head>
 <body>
@@ -82,9 +84,9 @@ footer a{color:#888;text-decoration:none}
   <div class="wrap">
     <h2>Here's what you need to know to jump in<br class="dbr"> and get the best results <em>in no time</em></h2>
     <div class="steps">
-      <div><span class="label">One</span><div><h3>Find your access email</h3><p>Look for an email from Hello Audio in the inbox you used at checkout, and open it on your phone. Not there within a few minutes? Check your Promotions or Spam folder.</p></div></div>
-      <div><span class="label">Two</span><div><h3>Add it to your podcast app</h3><p>Tap the button in that email and pick your podcast app (Apple Podcasts and Pocket Casts work beautifully). The Visibility Switch shows up just like any other podcast.</p></div></div>
-      <div><span class="label">Three</span><div><h3>Press play on "Start Here"</h3><p>In just three minutes, I'll show you how to get the biggest shifts from everything inside, in the shortest amount of time.</p></div></div>
+      <div><h3>Find your access email</h3><p>Look for an email from Hello Audio in the inbox you used at checkout, and open it on your phone. Not there within a few minutes? Check your Promotions or Spam folder.</p></div>
+      <div><h3>Add it to your podcast app</h3><p>Tap the button in that email and pick your podcast app (Apple Podcasts and Pocket Casts work beautifully). The Visibility Switch shows up just like any other podcast.</p></div>
+      <div><h3>Press play on "Start Here"</h3><p>In just three minutes, I'll show you how to get the biggest shifts from everything inside, in the shortest amount of time.</p></div>
     </div>
     <p class="help">Can't find the Hello Audio email? Write to <a href="mailto:support@theidentitymagician.com">support@theidentitymagician.com</a> and we'll sort it out right away.</p>
   </div>
@@ -92,10 +94,10 @@ footer a{color:#888;text-decoration:none}
 
 <section class="extra">
   <div class="wrap">
-    <h2>Good to <em>know</em></h2>
+    <h2>Good to know</h2>
     <div class="grid">
-      <div class="card"><h3>Your questions live in the show notes</h3><p>Each phase comes with its questions right under the audio in your podcast app. Answer them before you move on, that's where the biggest shifts happen.</p></div>
-      <div class="card"><h3>14 Days of Showing the F*ck Up</h3><p>Your dares are in a separate doc. You'll find the link in the show notes of the very last track, ready for when you've finished the three phases.</p></div>
+      <div class="card"><h3>Your questions live in the show notes</h3><p>Each phase comes with its own journaling questions that you will find in the show notes. Answer them before you move on, that's where the biggest shifts happen.</p></div>
+      <div class="card"><h3>14 Days of Showing the F*ck Up</h3><p>Your dares are in a separate doc.</p><p>You will find the link in the show notes of the very last episode so that you can dive in as soon as your three phases are finished.</p></div>
     </div>
   </div>
 </section>
